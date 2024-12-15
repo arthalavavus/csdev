@@ -1,6 +1,6 @@
 import tkinter as tk
 import random
-
+#bla
 # Paramètres du jeu
 TAILLE_GRILLE = 8  # Taille de la grille (8x8)
 NOMBRE_MINES = 10  # Nombre de mines
