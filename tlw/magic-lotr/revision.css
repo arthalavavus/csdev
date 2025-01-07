@@ -1,0 +1,105 @@
+/* 1. Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Pour inclure les bordures et paddings dans la largeur/hauteur */
+  }
+  
+  /* 2. Définir la police Lato et la taille du texte à 14px */
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+  }
+  
+  /* 3. Mise en forme de l'en-tête */
+  
+  /* Style de l'en-tête (fond noir, hauteur 55px, disposition Flex) */
+  header {
+    background-color: black; /* Fond noir */
+    height: 55px; /* Hauteur de l'en-tête */
+    display: flex; /* Disposition en flexbox */
+    align-items: center; /* Centrage vertical des éléments */
+    justify-content: space-between; /* Espacement entre le logo et la navigation */
+    padding-left: 5%; /* Padding à gauche de 5% */
+  }
+  
+  /* Style du logo */
+  header img {
+    width: 130px; /* Largeur du logo */
+  }
+  
+  /* Style de la barre de navigation */
+  nav {
+    display: flex; /* Disposition en flexbox pour les liens */
+    align-items: center; /* Centrage vertical des liens */
+  }
+  
+  /* Style des liens de navigation */
+  nav a {
+    color: white; /* Couleur des liens en blanc */
+    font-weight: bold; /* Liens en gras */
+    text-transform: uppercase; /* Liens en majuscules */
+    text-decoration: none; /* Suppression de la décoration (soulignement) */
+    padding: 1em; /* Padding à gauche et à droite des liens */
+    margin-left: 1em; /* Espacement entre les liens */
+  }
+  
+  /* Effet de survol des liens */
+  nav a:hover {
+    color: #ea3601; /* Couleur rouge au survol */
+  }
+  
+  /* 4. Mise en forme de la zone principale */
+  
+  /* Style du conteneur principal (main) */
+  main {
+    width: 75%; /* Largeur de 75% */
+    margin: 15px auto 0; /* Marge supérieure de 15px et centré horizontalement */
+    display: flex;
+    justify-content: center; /* Centrer le contenu à l'intérieur */
+  }
+  
+  /* 5. Mise en forme de la grille dans main */
+  
+  /* Grille de 4 colonnes dans main */
+  .main-grid {
+    display: grid; /* Disposition en grille */
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+    grid-row-gap: 15px; /* Espacement de 15px entre les lignes */
+  }
+  
+  /* 6. Style des images avec la classe .card-img */
+  .card-img {
+    height: 320px; /* Hauteur de l'image */
+    border-radius: 10px; /* Bordure arrondie */
+  }
+  
+  /* 7. Style du paragraphe dans le template */
+  .main-grid p {
+    color: antiquewhite; /* Couleur du texte antiquewhite */
+    font-weight: 500; /* Poids du texte égal à 500 */
+  }
+  
+  /* 8. Autres commandes utiles */
+  
+  /* Centrer un élément avec Flexbox */
+  .center-flex {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+  }
+  
+  /* Liens sans décoration, en majuscules */
+  a {
+    text-transform: uppercase; /* Liens en majuscules */
+    text-decoration: none; /* Suppression du soulignement */
+  }
+  
+  /* Survol des liens (changement de couleur) */
+  a:hover {
+    color: #ea3601; /* Changement de couleur au survol */
+
+  }
+  
