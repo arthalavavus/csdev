@@ -9,13 +9,14 @@ async function afficherCartes()
     fetch(url)
         .then(response=> response.json())
         .then(donnee => { let template = document.querySelector("#card-template");
+            let grid = document.querySelector("#grid-container");
             for (carte of donnee.data)  { 
                 let clone = document.importNode(template.content, true); // clone le template
                 let newContent = clone.firstElementChild.innerHTML // remplace {{modèle}}
                     .replace(/{{texte}}/g, carte.printed_name) // et {{lieux}} par
-                    .replace(/{{texte}}/g, carte.printed_name); // et {{lieux}} par
+                    newContent.querySelector("img").src = carte.image_uris.normal;
                 clone.firstElementChild.innerHTML = newContent;
-                document.body.appendChild(clone); // On ajoute le clone créé
+                grid.appendChild(clone)
 }
         
             
