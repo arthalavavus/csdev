@@ -1,0 +1,160 @@
+/*.card-img {
+    margin: 10px 0;
+    height: 150px;
+}
+
+.card {
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    border-radius: 5px;
+}
+
+#site-header {
+    width: 100%;
+    height: 50px;
+}
+
+#logo {
+    height: 50px;
+    margin: 0px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(140,155,172);
+    z-index: 10000 ;
+    box-shadow: 2px 7px 12px 5px rgba(0,0,0,0.4);   
+}
+
+nav {   
+    position: absolute;
+    list-style-type: none;
+    right: 0px;
+    height: 10vh;
+    background-color: rgba(0,0,0,0);
+    top: 0px;
+    margin-top: 0px; 
+    z-index: 0;  
+}
+
+nav li {
+    float: left;
+    padding: 5px 5px;
+    width: 10vw;
+    list-style-type: none;
+}
+
+nav li a {
+    position: relative; 
+    font-family: "Roboto Mono",monospace;
+    display: block;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    transition: .3s;
+
+}
+
+main{
+    margin-top: 100px;
+    
+    display: flex;
+    flex-direction: column;
+}
+.button {
+    background-color:red;
+    top:0px;
+
+}
+
+#conteneur {
+    width: 75%;
+    margin: 0 auto; /* Centre le div 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes 
+    grid-gap: 15px; /* Espacement entre les cellules 
+  
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+#site-header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 150px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+button#button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#button:hover {
+    background-color: #0056b3;
+}
