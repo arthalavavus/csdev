@@ -8,11 +8,10 @@ async function afficherCartes()
     .then(response=> response.json())
     .then(donnee => {
         for (carte of donnee.data)  {
-            myP = document.createElement("p")
-            myP.innerText = carte.printed_name
-            document.body.appendChild(myP)
+            contenu_json.push(carte.printed_name);
         }
-    })
+        console.log(contenu_json);
+    });
 }
 
     
