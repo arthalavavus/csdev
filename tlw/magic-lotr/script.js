@@ -14,8 +14,7 @@ async function afficherCartes()
                 let clone = document.importNode(template.content, true); // clone le template
                 let newContent = clone.firstElementChild.innerHTML // remplace {{modèle}}
                     .replace(/{{texte}}/g, carte.printed_name) // et {{lieux}} par
-                a =newContent.querySelector("#img")
-                    a.src = carte.image_uris.normal;
+                    .replace(/{{img}}/g, carte.image_uris.normal)
                 clone.firstElementChild.innerHTML = newContent;
                 grid.appendChild(clone)
 }
