@@ -3,18 +3,24 @@ function parseMana(str) {
 }
 async function afficherCartes()
 {
-    
+    let url ='https://api.scryfall.com/cards/search?q=e:ltr lang:fr&format=json&order=set&unique=prints%20'
     let contenu_json = [];
-
-        fetch('https://api.scryfall.com/cards/search?q=e:ltr lang:fr&format=json&order=set&unique=prints%20')
+    let has_more = true    
+    fetch(url)
         .then(response=> response.json())
-        .then(donnee => {
+        .then(donnee => { let template = document.querySelector("#card-template");
             for (carte of donnee.data)  { 
-                contenu_json.push(carte.printed_name);
-                contenu_json.push(carte.image_uris);
+                let clone = document.importNode(template.content, true); // clone le template
+                let newContent = clone.firstElementChild.innerHTML // remplace {{modèle}}
+                    .replace(/{{texte}}/g, carte.printed_name) // et {{lieux}} par
+                    .replace(/{{texte}}/g, carte.printed_name); // et {{lieux}} par
+                clone.firstElementChild.innerHTML = newContent;
+                document.body.appendChild(clone); // On ajoute le clone créé
+}
         
-            }
-    
+            
+            has_more = donnee.has_more
+            url = donnee.next_page
             console.log(contenu_json);
     });
 }
