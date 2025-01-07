@@ -5,7 +5,8 @@ async function afficherCartes()
 {
     let url ='https://api.scryfall.com/cards/search?q=e:ltr lang:fr&format=json&order=set&unique=prints%20'
     let contenu_json = [];
-    let has_more = true    
+    let has_more = true
+        
     fetch(url)
         .then(response=> response.json())
         .then(donnee => { let template = document.querySelector("#card-template");
