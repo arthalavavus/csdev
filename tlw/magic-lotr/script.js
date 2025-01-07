@@ -5,8 +5,7 @@ async function afficherCartes()
 {
     let url ='https://api.scryfall.com/cards/search?q=e:ltr lang:fr&format=json&order=set&unique=prints%20'
     let contenu_json = [];
-    let has_more = true
-        
+    let has_more = true    
     fetch(url)
         .then(response=> response.json())
         .then(donnee => { let template = document.querySelector("#card-template");
@@ -27,4 +26,19 @@ async function afficherCartes()
     });
 }
 
-    
+
+
+/*
+function afficherCartes()
+{ async
+    fetch('https://api.scryfall.com/cards/search?q=e:ltr&format=json&order=set&unique=prints%20lang:fr')
+    .then(response=> response.json())
+    .then(donnee => {
+        for (carte of donnee.data)  {
+            myP = document.createElement("p")
+            myP.innerText = carte.printed_name
+            document.body.appendChild(myP)
+        }
+    })
+}
+*/
