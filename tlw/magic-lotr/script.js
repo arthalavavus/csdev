@@ -29,8 +29,8 @@ async function afficherCartes()
 
 
 /*
-function afficherCartes()
-{ async
+async function afficherCartes()
+{ 
     fetch('https://api.scryfall.com/cards/search?q=e:ltr&format=json&order=set&unique=prints%20lang:fr')
     .then(response=> response.json())
     .then(donnee => {
